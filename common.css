@@ -2653,7 +2653,13 @@ h2.tms-h2 {
     align-items: center;
     border-radius: 100%;
     box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.08);
-    background-color: #fff;
+    background-color: #ffec9f;
+    color: #3c3c3c;
     transition: 1s ease all;
+  }
+  .state-info,
+  .pickup-notice {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
