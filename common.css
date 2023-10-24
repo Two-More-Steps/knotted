@@ -1748,6 +1748,7 @@ h2.tms-h2 {
 #mypage-list .nav {
   max-width: 1280px;
   padding: 0 64px;
+  margin: 0 auto;
 }
 #w202310232928c4edb662d ul,
 #w20231024041ccafc86387 ul,
