@@ -1855,15 +1855,6 @@ h2.tms-h2 {
   border-radius: 20px;
 }
 
-main {
-  opacity: 0;
-  transition: opacity 1s ease;
-}
-
-.tms-loaded main {
-  opacity: 1;
-}
-
 .doz_sys .modal-content {
   border-radius: 20px;
 }
@@ -2022,4 +2013,17 @@ main {
   border: none !important;
   padding: 0;
   padding-bottom: 40px;
+}
+
+.shop-content .shop-tools {
+  text-align: left;
+  padding-bottom: 40px;
+}
+.shop-content .shop-tools .down-btn {
+  border-radius: 2.5em;
+  border: 1px solid #a5a5a5;
+  padding: 0 16px;
+}
+.shop-content .shop-tools .down-btn::after {
+  right: 16px;
 }
