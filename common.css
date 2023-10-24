@@ -3,6 +3,10 @@
   position: relative;
 }
 
+.mobile-only {
+  display: none;
+}
+
 #w20231019c1a4afceae3c2,
 #w20231019e6bb790face79,
 #w20231019021b5d0dd08d7,
@@ -1280,7 +1284,8 @@ h2.tms-h2 {
 }
 
 .pickup-date-swiper,
-.pickup-season-date-swiper {
+.pickup-season-date-swiper,
+.pickup-menu-swiper {
   position: relative;
   width: 100%;
   margin-bottom: 48px;
@@ -1289,7 +1294,9 @@ h2.tms-h2 {
 .pickup-date-swiper .swiper-button-next,
 .pickup-date-swiper .swiper-button-prev,
 .pickup-season-date-swiper .swiper-button-next,
-.pickup-season-date-swiper .swiper-button-prev {
+.pickup-season-date-swiper .swiper-button-prev,
+.pickup-menu-swiper .swiper-button-next,
+.pickup-menu-swiper .swiper-button-prev {
   width: 48px;
   height: 48px;
   border-radius: 100%;
@@ -1302,7 +1309,9 @@ h2.tms-h2 {
 .pickup-date-swiper .swiper-button-next:after,
 .pickup-date-swiper .swiper-button-prev:after,
 .pickup-season-date-swiper .swiper-button-next:after,
-.pickup-season-date-swiper .swiper-button-prev:after {
+.pickup-season-date-swiper .swiper-button-prev:after,
+.pickup-menu-swiper .swiper-button-next:after,
+.pickup-menu-swiper .swiper-button-prev:after {
   justify-content: center;
   align-items: center;
   font-weight: 700;
@@ -1313,7 +1322,9 @@ h2.tms-h2 {
 .pickup-date-swiper .swiper-button-next.swiper-button-disabled,
 .pickup-date-swiper .swiper-button-prev.swiper-button-disabled,
 .pickup-season-date-swiper .swiper-button-next.swiper-button-disabled,
-.pickup-season-date-swiper .swiper-button-prev.swiper-button-disabled {
+.pickup-season-date-swiper .swiper-button-prev.swiper-button-disabled,
+.pickup-menu-swiper .swiper-button-next.swiper-button-disabled,
+.pickup-menu-swiper .swiper-button-prev.swiper-button-disabled {
   opacity: 0;
 }
 
@@ -1350,6 +1361,33 @@ h2.tms-h2 {
   font-weight: 600;
 }
 
+.pickup-menu .pickup-menu-swiper {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  line-height: 1em;
+  font-size: 14px;
+}
+.pickup-menu .pickup-menu-swiper .tms-category-item {
+  width: -moz-max-content;
+  width: max-content;
+  border: 1px solid #a5a5a5;
+  padding: 8px 16px;
+  border-radius: 48px;
+  opacity: 0.2;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.pickup-menu .pickup-menu-swiper .tms-category-item.active {
+  opacity: 1;
+}
+.pickup-menu .pickup-menu-swiper .tms-category-item:hover {
+  opacity: 0.5;
+}
+.pickup-menu .pickup-menu-swiper .tms-category-item + .tms-category-item {
+  margin: 0;
+}
+
 .pickup-menu {
   display: none;
 }
@@ -1363,6 +1401,7 @@ h2.tms-h2 {
   max-width: 100%;
   margin: 0;
   padding: 0;
+  justify-content: flex-start;
 }
 .pickup-menu .tms-category-item {
   border-color: #a5a5a5;
@@ -2061,6 +2100,19 @@ h2.tms-h2 {
   color: #ffa2cb !important;
 }
 
+.mypage table.reservation-order .content img {
+  display: none;
+}
+.mypage table.reservation-order .content + .content {
+  border-top: none;
+}
+.mypage table.reservation-order .content + .content span.im-body-size.im-body-line-height.text-bold {
+  display: none;
+}
+.mypage table.reservation-order .content.tms-order-date .order_title {
+  display: none !important;
+}
+
 @media screen and (max-width: 1440px) {
   .tms-header {
     font-size: 14px;
@@ -2184,11 +2236,20 @@ h2.tms-h2 {
     background: #fff;
     margin: 0;
   }
+  .tms-steps,
+  .tms-category {
+    padding: 4px;
+    transform: none;
+  }
   .tms-reservation-bar label input {
     font-size: 18px;
   }
+  .tms-reservation-bar label {
+    z-index: 11;
+  }
   .tms-reservation-bar-list {
-    top: 100%;
+    top: calc(100% - 32px);
+    padding-top: 32px;
   }
   #w2023101619d6346992227 ._gallery_wrap {
     aspect-ratio: 1/1;
@@ -2297,15 +2358,293 @@ h2.tms-h2 {
   }
   .tms-footer {
     border-radius: 20px 20px 0 0;
+    margin-top: 48px;
+  }
+  .tms-bg {
+    display: none;
   }
   .tms-footer-bg1 {
-    top: 30%;
-    transform: scale(1.5) translateX(-50%);
+    top: 24%;
+    transform: scale(2) translateX(-50%);
   }
   .tms-footer-bg2 {
     transform: scale(1.5) translateY(0);
   }
   .tms-footer-bg3 {
     transform: scale(1.5) translate(30%, -16px);
+  }
+  .tms-subpage-title {
+    background: none;
+    height: 120px;
+  }
+  .tms-steps-title h4 {
+    display: none;
+  }
+  .tms-steps-title h3 {
+    font-size: 12px;
+  }
+  .tms-steps-item {
+    padding: 8px 16px;
+  }
+  .tms-reservation-mode .reservation-ui {
+    display: block;
+  }
+  .reservation-ui-left {
+    padding-top: 32px;
+  }
+  .pickup-time-list,
+  .pickup-season-time-list {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    padding: 0 20px;
+  }
+  .pickup-time-list li,
+  .pickup-season-time-list li {
+    padding: 20px;
+  }
+  .pickup-date-list li,
+  .pickup-season-date-list li {
+    width: 120px;
+  }
+  .reservation-buy,
+  .reservation-bulk {
+    display: none;
+  }
+  .reservation-ui-right {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    border-radius: 20px 20px 0 0;
+    width: 100%;
+    height: -moz-max-content;
+    height: max-content;
+    padding: 20px;
+    background-color: #fff;
+    transform: translateY(100%);
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.08);
+    transition: 1s ease all;
+    z-index: 1;
+  }
+  .reservation-ui-right.active {
+    transform: translateY(0);
+  }
+  .reservation-ui-right.active .pickup-handle {
+    transform: translate(-50%, -50%);
+  }
+  .reservation-ui-right h3 {
+    padding: 0;
+    display: none;
+  }
+  .reservation-ui-right h4 {
+    margin-top: 0;
+    font-size: 16px;
+  }
+  .reservation-ui-right .reservation-ui-right .view_tit {
+    font-size: 18px;
+    margin: 0;
+  }
+  .shop_mypage .left-menu {
+    display: block;
+  }
+  #mypage-list {
+    display: none;
+  }
+  .mypage .head {
+    border: none !important;
+  }
+  .shop-content.payment {
+    padding: 20px;
+  }
+  .reservation-ui-right .reservation-menu-total {
+    font-size: 14px;
+  }
+  .shop_view .reservation-ui-select {
+    padding: 0;
+    height: auto;
+  }
+  .tms-card-btn a:hover {
+    background-color: #fdfaf7;
+  }
+  #doz_body .tms-reservation-info {
+    font-size: 12px;
+  }
+  .shop_view .reservation-ui-right h3 {
+    background: none;
+  }
+  .shop_mypage .col-md-10 {
+    padding: 0 35px;
+  }
+  .reservation-event-title,
+  .shop_view .reservation-ui-right h3::after {
+    display: none;
+  }
+  .reservation-event {
+    display: none;
+  }
+  .pickup-date-list li:hover,
+  .pickup-season-date-list li:hover {
+    opacity: 1;
+  }
+  .pickup-menu .pickup-menu-swiper .tms-category-item:hover {
+    opacity: initial;
+  }
+  .pickup-date-swiper,
+  .pickup-season-date-swiper,
+  .pickup-menu-swiper {
+    padding: 0 24px !important;
+  }
+  .pickup-date-swiper .swiper-button-prev,
+  .pickup-date-swiper .swiper-button-next,
+  .pickup-season-date-swiper .swiper-button-prev,
+  .pickup-season-date-swiper .swiper-button-next,
+  .pickup-menu-swiper .swiper-button-prev,
+  .pickup-menu-swiper .swiper-button-next {
+    display: none;
+  }
+  .reservation-ui {
+    padding: 0;
+  }
+  .tms-card-list {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  .tms-category {
+    padding: 4px;
+  }
+  .tms-card-btn a {
+    font-size: 12px;
+  }
+  .tms-category-item {
+    font-size: 14px;
+    padding: 4px 8px;
+    width: auto;
+  }
+  .tms-category-item + .tms-category-item {
+    margin-left: 4px;
+  }
+  .tms-card-search {
+    margin-top: 24px;
+  }
+  .tms-card-item .tms-card-title {
+    margin-top: 20px;
+    font-size: 16px;
+  }
+  .tms-card-item .tms-card-body {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  .tms-subpage-title h2 {
+    font-size: 28px;
+  }
+  #s20231019190dd853206a0,
+  #w20231022babca3c9d2385 {
+    margin-top: 16px;
+  }
+  .tms-normal-mode .tms-subpage-title {
+    display: none;
+  }
+  #w2023101987737fc115254,
+  #w20231019a2ae4f3bb8c65,
+  #w20231022d9cf371e770b4,
+  #w202310221121f8752f270 {
+    display: none;
+  }
+  #w20231017f9e1d617170a3,
+  #w20231023e600b286ccccb {
+    padding: 0 20px;
+  }
+  #w20231017f9e1d617170a3 .shop-content .shop-tools,
+  #w20231023e600b286ccccb .shop-content .shop-tools {
+    margin: 24px 0 !important;
+  }
+  #w20231017f9e1d617170a3 .shop-item h2,
+  #w20231023e600b286ccccb .shop-item h2 {
+    font-size: 16px !important;
+  }
+  #w20231017f9e1d617170a3 .type-list .shop-item,
+  #w20231023e600b286ccccb .type-list .shop-item {
+    margin-bottom: 20px;
+  }
+  #w20231017f9e1d617170a3 .item-detail .item-pay-detail .pay,
+  #w20231023e600b286ccccb .item-detail .item-pay-detail .pay {
+    font-size: 14px !important;
+  }
+  #text_w2023102457377d8f9364f,
+  #text_w20231024fc56334bab82e {
+    padding: 0;
+  }
+  .help-links {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .help-links > div {
+    margin: 0 16px !important;
+  }
+  .help-links > div + div {
+    margin-top: 48px !important;
+  }
+  .help-links img {
+    max-width: 120px !important;
+  }
+  .help-links a + a {
+    width: -moz-min-content !important;
+    width: min-content !important;
+    white-space: nowrap;
+  }
+  .shop_view #doz_header .scroll-to-fixed-fixed {
+    position: fixed !important;
+  }
+  .reservation-date,
+  .reservation-menu {
+    border-top: 1px solid #ebebeb;
+    margin-top: 20px;
+    padding-top: 20px;
+    font-size: 14px;
+  }
+  .mobile-only {
+    display: block !important;
+  }
+  .mobile-only .reservation-buy,
+  .mobile-only .reservation-bulk {
+    margin-top: 32px;
+  }
+  .mobile-only .reservation-buy.active,
+  .mobile-only .reservation-bulk.active {
+    display: block;
+  }
+  .mobile-only .reservation-buy-btn,
+  .mobile-only .reservation-bulk-btn {
+    position: initial;
+  }
+  .mobile-only .reservation-buy-btn-text,
+  .mobile-only .reservation-bulk-btn-text {
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+  .mobile-only .reservation-buy::after,
+  .mobile-only .reservation-bulk::after {
+    display: none;
+  }
+  .reservation-location h4 {
+    display: none;
+  }
+  .tms-reservation-info {
+    display: none;
+  }
+  .pickup-handle {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, calc(-100% - 20px));
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.08);
+    background-color: #fff;
+    transition: 1s ease all;
   }
 }
