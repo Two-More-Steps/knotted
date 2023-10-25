@@ -122,9 +122,13 @@ body.shop_payment_complete .section_wrap[doz_footer_repeat=N] {
 .tms-header.fixed svg {
   height: 32px;
 }
+.tms-header.fixed .tms-header-nav {
+  height: 32px;
+}
 .tms-header.fixed .tms-header-nav,
 .tms-header.fixed .tms-header-member {
-  padding: 8px 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 .tms-header::-moz-selection {
   color: #3c3c3c;
@@ -155,10 +159,14 @@ body.shop_payment_complete .section_wrap[doz_footer_repeat=N] {
   justify-content: center;
   padding-left: 32px;
   padding-right: 32px;
+  height: 60px;
+  transition: 0.5s ease all;
+  overflow-y: hidden;
 }
 .tms-header-nav > li {
   margin: 0 32px;
   white-space: nowrap;
+  position: relative;
 }
 .tms-header-member {
   display: flex;
@@ -181,7 +189,11 @@ body.shop_payment_complete .section_wrap[doz_footer_repeat=N] {
   font-size: 14px;
   padding: 32px 0 0;
   width: 100%;
-  display: none;
+  position: absolute;
+  top: 16px;
+  left: 0;
+  opacity: 0;
+  transition: 1s ease;
 }
 .tms-header .depth-01 ul li {
   line-height: 1em;
@@ -195,8 +207,11 @@ body.shop_payment_complete .section_wrap[doz_footer_repeat=N] {
 .tms-header:hover {
   background-color: #fdfaf7;
 }
+.tms-header .tms-header-nav:hover {
+  height: 170px;
+}
 .tms-header .tms-header-nav:hover .depth-01 ul {
-  display: block;
+  opacity: 1;
 }
 
 h2.tms-h2 {
