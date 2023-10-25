@@ -122,9 +122,6 @@ body.shop_payment_complete .section_wrap[doz_footer_repeat=N] {
 .tms-header.fixed svg {
   height: 32px;
 }
-.tms-header.fixed .tms-header-nav {
-  height: 32px;
-}
 .tms-header.fixed .tms-header-nav,
 .tms-header.fixed .tms-header-member {
   padding-top: 8px;
@@ -159,7 +156,7 @@ body.shop_payment_complete .section_wrap[doz_footer_repeat=N] {
   justify-content: center;
   padding-left: 32px;
   padding-right: 32px;
-  height: 60px;
+  height: 32px;
   transition: 0.5s ease all;
   overflow-y: hidden;
 }
@@ -2159,6 +2156,9 @@ h2.tms-h2 {
   }
   .tms-header-nav > li {
     margin: 0 24px;
+  }
+  .tms-header .tms-header-nav:hover {
+    height: 130px;
   }
 }
 @media screen and (max-width: 1312px) {
