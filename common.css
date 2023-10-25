@@ -2126,6 +2126,11 @@ h2.tms-h2 {
   content: "*";
 }
 
+#s20231024e0da0de000950 .section_bg_color {
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0);
+}
+
 @media screen and (max-width: 1440px) {
   .tms-header {
     font-size: 14px;
