@@ -2122,6 +2122,10 @@ h2.tms-h2 {
   opacity: 1;
 }
 
+.order_detail h6::after {
+  content: "*";
+}
+
 @media screen and (max-width: 1440px) {
   .tms-header {
     font-size: 14px;
