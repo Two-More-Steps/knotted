@@ -772,15 +772,37 @@ h2.tms-h2 {
 .shop-item .item-detail {
   background-color: #fff;
   border-radius: 0 0 16px 16px;
-  box-shadow: 0px 0px 24px 0px rgba(230, 223, 199, 0.24);
-  padding: 40px 24px;
+  box-shadow: 0px 12px 24px 0px rgba(230, 223, 199, 0.24);
+  padding: 40px 0 0;
   line-height: 1em;
+  position: relative;
+  overflow: hidden;
+}
+.shop-item .item-detail .item-pay {
+  padding: 0 24px;
 }
 .shop-item .item-detail .ns-icon {
   display: none !important;
 }
-.shop-item .item-detail .item-icon {
-  margin-top: 20px !important;
+.shop-item .item-detail .item-icon.unit-list {
+  margin-top: 32px !important;
+  justify-content: center;
+  width: 100%;
+}
+.shop-item .item-detail .item-icon.unit-list span.im-icon-wrap {
+  display: block !important;
+  width: 100%;
+  border-top: 1px solid #ebebeb;
+  padding: 8px;
+  background-color: #fdfaf7;
+}
+.shop-item .item-detail .im-ico-cart:before {
+  content: "담기";
+  line-height: 1.8em;
+  font-size: 16px;
+  font-weight: 600;
+  color: #3c3c3c;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
 .shop-item.tms-sold-out .ns-icon {
   display: none !important;
@@ -2438,7 +2460,10 @@ h2.tms-h2 {
     top: -50px;
   }
   .shop-item .item-detail {
-    padding: 24px !important;
+    padding: 24px 0 0 !important;
+  }
+  .shop-item .item-detail .item-pay {
+    padding: 0 24px;
   }
   #w202310189f8d8e80c145c .owl-carousel .owl-item .text_wrap,
   #w20231018839cc2c5994f6 .owl-carousel .owl-item .text_wrap {
