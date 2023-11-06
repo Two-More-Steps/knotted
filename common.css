@@ -212,6 +212,9 @@ body.shop_payment_complete .section_wrap[doz_footer_repeat=N] {
 .tms-header .depth-01 ul li + li {
   margin-top: 16px;
 }
+.tms-header .depth-01 ul .depth-02 ul {
+  display: none;
+}
 .tms-header .depth-01 ul .depth-03 {
   display: none;
 }
@@ -1765,13 +1768,6 @@ h2.tms-h2 {
   color: #a5a5a5;
 }
 
-#s20230905cf46aae7bdfed .owl-stage,
-#s20230905cf46aae7bdfed .owl-item,
-#doz_body .modal-content .owl-stage,
-#doz_body .modal-content .owl-item {
-  width: 100% !important;
-  aspect-ratio: 1/1 !important;
-}
 #s20230905cf46aae7bdfed .goods_payment .opt_block,
 #s20230905cf46aae7bdfed .order_quantity_area,
 #doz_body .modal-content .goods_payment .opt_block,
