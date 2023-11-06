@@ -702,6 +702,7 @@ h2.tms-h2 {
 #doz_body .tms-reservation-info {
   font-size: 14px;
   border: none;
+  word-break: keep-all;
 }
 #doz_body .tms-reservation-info th {
   font-weight: 600;
@@ -761,6 +762,16 @@ h2.tms-h2 {
   font-size: 14px;
 }
 
+#doz_body .shop-item .item-detail .item-icon > span.im-icon-wrap {
+  display: block !important;
+}
+
+.shop-item .item-detail .item-icon > span,
+.shop-item .item-detail .item-icon > span a {
+  width: 100%;
+  display: block;
+}
+
 .shop-item .item-thumbs,
 .shop-item .shop-item-thumb {
   background-color: #fff;
@@ -780,21 +791,19 @@ h2.tms-h2 {
 }
 .shop-item .item-detail .item-pay {
   padding: 0 24px;
+  margin-bottom: 32px;
 }
 .shop-item .item-detail .ns-icon {
   display: none !important;
 }
 .shop-item .item-detail .item-icon.unit-list {
-  margin-top: 32px !important;
+  margin-top: 0 !important;
   justify-content: center;
   width: 100%;
 }
-.shop-item .item-detail .item-icon.unit-list span.im-icon-wrap {
-  display: block !important;
+.shop-item .item-detail .im-ico-cart {
   width: 100%;
-  border-top: 1px solid #ebebeb;
-  padding: 8px;
-  background-color: #fdfaf7;
+  display: block;
 }
 .shop-item .item-detail .im-ico-cart:before {
   content: "담기";
@@ -803,6 +812,11 @@ h2.tms-h2 {
   font-weight: 600;
   color: #3c3c3c;
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  display: block !important;
+  width: 100%;
+  border-top: 1px solid #ebebeb;
+  padding: 8px;
+  background-color: #fdfaf7;
 }
 .shop-item.tms-sold-out .ns-icon {
   display: none !important;
@@ -835,6 +849,7 @@ h2.tms-h2 {
   text-overflow: ellipsis;
   overflow: hidden;
   display: block;
+  margin-bottom: 40px;
 }
 .shop-item .item-pay h2 {
   font-weight: 600 !important;
@@ -1830,6 +1845,7 @@ h2.tms-h2 {
 #s20230905cf46aae7bdfed .shop-content .goods_form .view_tit,
 #doz_body .modal-content .shop-content .goods_form .view_tit {
   font-weight: 600;
+  word-break: keep-all;
 }
 #s20230905cf46aae7bdfed .option_btn_tools input.form-control,
 #doz_body .modal-content .option_btn_tools input.form-control {
