@@ -97,6 +97,69 @@ body.shop_payment_complete .section_wrap[doz_footer_repeat=N] {
   overflow: hidden;
 }
 
+.category-div {
+  display: none;
+}
+
+.tms-qna {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 64px;
+}
+
+.tms-dropdown {
+  position: relative;
+  display: inline-block;
+  margin: 8px;
+}
+
+.tms-dropbtn {
+  display: flex;
+  width: 200px;
+  color: black;
+  padding: 8px 16px;
+  font-size: 16px;
+  border: 1px solid #a5a5a5;
+  cursor: pointer;
+  text-align: left;
+  border-radius: 32px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tms-dropbtn:after {
+  content: "";
+  margin-top: 7px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.tms-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 10001;
+}
+
+.tms-dropdown-content div {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.tms-dropdown-content div:hover {
+  background-color: #f1f1f1;
+}
+
+.tms-show {
+  display: block;
+}
+
 .write_mode .tms-header {
   display: none;
 }
