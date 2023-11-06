@@ -1142,7 +1142,7 @@ h2.tms-h2 {
   cursor: pointer;
   border-radius: 48px;
   border: 1px solid #fff;
-  opacity: 0.2;
+  opacity: 0.4;
 }
 .tms-category-item:hover {
   opacity: 0.5;
@@ -1161,7 +1161,7 @@ h2.tms-h2 {
   justify-content: center;
 }
 #w2023110623b0a1142c1c2 .nav ul li {
-  opacity: 0.2;
+  opacity: 0.4;
 }
 #w2023110623b0a1142c1c2 .nav ul li.active {
   font-weight: 600;
@@ -1300,7 +1300,7 @@ h2.tms-h2 {
   cursor: pointer;
   border-radius: 48px;
   border: 1px solid #fff;
-  opacity: 0.2;
+  opacity: 0.4;
 }
 .tms-steps-item.active {
   opacity: 1;
@@ -1424,7 +1424,7 @@ h2.tms-h2 {
   border: 1px solid #a5a5a5;
   padding: 8px 16px;
   border-radius: 48px;
-  opacity: 0.2;
+  opacity: 0.4;
   cursor: pointer;
 }
 .pickup-date-list li.active,
@@ -1455,7 +1455,7 @@ h2.tms-h2 {
   border: 1px solid #a5a5a5;
   padding: 8px 16px;
   border-radius: 48px;
-  opacity: 0.2;
+  opacity: 0.4;
   cursor: pointer;
   flex-shrink: 0;
 }
@@ -1508,7 +1508,7 @@ h2.tms-h2 {
   text-align: center;
   line-height: 1em;
   gap: 24px;
-  opacity: 0.1;
+  opacity: 0.4;
 }
 .pickup-time-list.active,
 .pickup-season-time-list.active {
@@ -1887,7 +1887,7 @@ h2.tms-h2 {
   cursor: pointer;
   border-radius: 48px;
   border: 1px solid #fff;
-  opacity: 0.2;
+  opacity: 0.4;
 }
 #w202311064515ce43a3291 ul li:hover,
 #w20231024041ccafc86387 ul li:hover,
