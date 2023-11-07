@@ -74,6 +74,14 @@ body.tms-subpage {
   padding: 0;
 }
 
+body.shop_payment .tip-off._form_config_wrap {
+  display: none !important;
+}
+
+body.reservation-payments .tip-off._form_config_wrap {
+  display: block !important;
+}
+
 body.shop_payment .section_wrap[doz_footer_repeat=N],
 body.shop_mypage .section_wrap[doz_footer_repeat=N],
 body.shop_payment_complete .section_wrap[doz_footer_repeat=N] {
@@ -1052,7 +1060,7 @@ h2.tms-h2 {
   width: 32px;
 }
 .reservation-ui-right .reservation-menu-inner {
-  max-height: 20vh;
+  max-height: calc(100vh - 600px);
   height: -moz-max-content;
   height: max-content;
   overflow: hidden;
