@@ -1060,7 +1060,7 @@ h2.tms-h2 {
   width: 32px;
 }
 .reservation-ui-right .reservation-menu-inner {
-  max-height: calc(100vh - 600px);
+  max-height: calc(100vh - 720px);
   height: -moz-max-content;
   height: max-content;
   overflow: hidden;
@@ -2912,5 +2912,8 @@ h2.tms-h2 {
   }
   .pc-only {
     display: none;
+  }
+  .reservation-menu-inner {
+    max-height: calc(100vh - 400px);
   }
 }
