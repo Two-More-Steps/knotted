@@ -2913,7 +2913,7 @@ h2.tms-h2 {
   .pc-only {
     display: none;
   }
-  .reservation-menu-inner {
-    max-height: calc(100vh - 400px);
+  .reservation-ui-right .reservation-menu-inner {
+    max-height: 400px;
   }
 }
