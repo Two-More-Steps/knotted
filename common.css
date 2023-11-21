@@ -269,6 +269,7 @@ body.shop_payment_complete .section_wrap[doz_footer_repeat=N] {
   padding: 32px 0 0;
   width: -moz-max-content;
   width: max-content;
+  text-align: center;
   position: absolute;
   top: 16px;
   left: 50%;
