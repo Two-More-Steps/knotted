@@ -19,6 +19,9 @@
 .tms-campaign #s20230905cf46aae7bdfed .inside #prod_detail_body.product_qna {
   padding: 32px;
 }
+.tms-campaign #s20230905cf46aae7bdfed .inside .option_box {
+  display: none !important;
+}
 .tms-campaign #s20230905cf46aae7bdfed .inside .form-select-wrap .dropdown-toggle {
   display: flex;
   justify-content: flex-start;
@@ -57,6 +60,15 @@
 }
 .tms-campaign #s20230905cf46aae7bdfed .inside div[data-widget-type=shop_view] .goods_form > header .pay_detail {
   display: none;
+}
+.tms-campaign #s20230905cf46aae7bdfed .inside .form-select-wrap.open .dropdown-menu {
+  border-top: none;
+}
+.tms-campaign #s20230905cf46aae7bdfed .inside .form-select-wrap.open .dropdown-menu .dropdown-item > a span {
+  margin: 0 !important;
+}
+.tms-campaign #s20230905cf46aae7bdfed .inside .form-select-wrap.open .dropdown-menu .dropdown-item > a span + span {
+  display: none !important;
 }
 .tms-campaign .option_box {
   opacity: 0.5;
@@ -177,6 +189,12 @@
   border-radius: 8px;
   background-color: #fff;
   box-shadow: 0px 0px 24px 0px rgba(230, 223, 199, 0.24);
+}
+
+.doz_sys.shop_payment .shop-content input.form-control,
+.doz_sys.shop_payment .shop-content select.form-control,
+.doz_sys .shop-content input.form-control.count {
+  background: none !important;
 }
 
 @media (max-width: 768px) {
